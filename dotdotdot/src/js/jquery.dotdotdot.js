@@ -1,5 +1,5 @@
 /*
- *	jQuery dotdotdot 1.6.14
+ *	jQuery dotdotdot 1.7.1
  *
  *	Copyright (c) Fred Heusschen
  *	www.frebsite.nl
@@ -7,9 +7,8 @@
  *	Plugin website:
  *	dotdotdot.frebsite.nl
  *
- *	Dual licensed under the MIT and GPL licenses.
+ *	Licensed under the MIT license.
  *	http://en.wikipedia.org/wiki/MIT_License
- *	http://en.wikipedia.org/wiki/GNU_General_Public_License
  */
 
 (function( $, undef )
@@ -83,7 +82,9 @@
 						.detach()
 						.end()
 						.append( orgContent.clone( true ) )
-						.find( 'br' ).replaceWith( '  <br />  ' ).end()
+						.find( 'br' )
+						.replaceWith( '  <br />  ' )
+						.end()
 						.css({
 							'height'	: 'auto',
 							'width'		: 'auto',
@@ -342,7 +343,7 @@
 		var notx = 'table, thead, tbody, tfoot, tr, col, colgroup, object, embed, param, ol, ul, dl, blockquote, select, optgroup, option, textarea, script, style';
 
 		//	Don't remove these elements even if they are after the ellipsis
-		var noty = 'script';
+		var noty = 'script, .dotdotdot-keep';
 
 		$elem
 			.contents()
@@ -369,7 +370,7 @@
 					else
 					{
 						$elem.append( $e );
-						if ( after )
+						if ( after && !$e.is( o.after ) && !$e.find( o.after ).length  )
 						{
 							$elem[ $elem.is( notx ) ? 'after' : 'append' ]( after );
 						}
