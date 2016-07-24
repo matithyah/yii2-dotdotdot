@@ -1,7 +1,7 @@
 yii2-dotdotdot
 ==============
 
-JQuery DotDotDot Plugin For Yii 2.x
+JQuery DotDotDot extension for Yii 2
 
 Installation
 ------------
@@ -11,36 +11,28 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist harrytang/yii2-dotdotdot "*"
+php composer.phar require --prefer-dist modernkernel/yii2-dotdotdot "*"
 ```
 
 or add
 
 ```json
-"harrytang/yii2-dotdotdot": "*"
+"modernkernel/yii2-dotdotdot": "*"
 ```
 
 to the `require` section of your composer.json.
 
-Quick start
------------
+Usage
+-----
+Once the extension is installed, simply use it in your code by :
 
 ```
-    <div class="dot3" style="height: 50px;">
-        The main property of Menu is $items, which specifies the possible items in the menu. A menu item can contain sub-items which specify the sub-menu under that menu item.
-        <br /><br />
-        Menu checks the current route and request parameters to toggle certain menu items with active state.
-        <br /><br />
-        Note that Menu only renders the HTML tags about the menu. It does do any styling. You are responsible to provide CSS styles to make it look like a real menu.
-    </div>
-
-    <?php
-    \harrytang\dotdotdot\DotDotDot::widget();
-    ?>
-```
-or
-```
-    <?php
-    \harrytang\dotdotdot\DotDotDot::widget('selector'=>'dot3, 'options'=>['key'=>'value']);
-    ?>
+<?=
+    \modernkernel\dotdotdot\Dotdotdot::widget([
+        'tag'=>'p', // content tag
+        'content'=>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', // your full content here
+        'options'=>['style'=>'height: 50px; width: 200px'], // tag options
+        'clientOptions'=>[] // dotdotdot configuration options, see http://dotdotdot.frebsite.nl/
+    ])
+?>
 ```

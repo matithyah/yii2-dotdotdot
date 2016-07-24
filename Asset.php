@@ -1,19 +1,22 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Harry
- * Date: 4/27/14
- * Time: 1:11 PM
+ * @author Harry Tang <harry@modernkernel.com>
+ * @link https://modernkernel.com
+ * @copyright Copyright (c) 2016 Modern Kernel
  */
 
-namespace harrytang\dotdotdot;
+namespace modernkernel\dotdotdot;
 
 
 use yii\web\AssetBundle;
 
+/**
+ * Class Asset
+ * @package modernkernel\dotdotdot
+ */
 class Asset extends AssetBundle
 {
-    public $sourcePath = '@vendor/harrytang/yii2-dotdotdot/dotdotdot/src/js';
+    public $sourcePath = '@npm/jquery.dotdotdot/src';
     public $js = [
         'jquery.dotdotdot.min.js'
     ];
