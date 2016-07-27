@@ -62,7 +62,7 @@ class Dotdotdot extends Widget
     protected function registerJS()
     {
         $clientOptions = !empty($this->clientOptions) ? json_encode($this->clientOptions) : '{}';
-        $script = '$("#' . $this->getId() . '").dotdotdot(' . $clientOptions . ');';
+        $script = '$("#' . $this->options['id'] . '").dotdotdot(' . $clientOptions . ');';
         $this->view->registerJs($script);
     }
 
