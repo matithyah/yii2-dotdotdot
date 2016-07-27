@@ -6,7 +6,7 @@
  */
 
 
-namespace modernkernel\dotdotdot;
+namespace matithyah\dotdotdot;
 
 use yii\base\Widget;
 use yii\helpers\Html;
