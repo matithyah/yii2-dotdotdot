@@ -1,8 +1,8 @@
 {
-    "name": "modernkernel/yii2-dotdotdot",
-    "description": "JQuery DotDotDot extension for Yii 2",
+    "name": "matithyah/yii2-dotdotdot",
+    "description": "JQuery DotDotDot extension for Yii 2 - fork",
     "keywords": ["yii", "extension", "dotdotdot"],
-    "homepage": "https://github.com/modernkernel/yii2-dotdotdot",
+    "homepage": "https://github.com/matithyah/yii2-dotdotdot",
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
     "authors": [
@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "modernkernel\\dotdotdot\\": ""
+            "matithyah\\dotdotdot\\": ""
         }
     }    
 }
