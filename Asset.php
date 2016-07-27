@@ -5,7 +5,7 @@
  * @copyright Copyright (c) 2016 Modern Kernel
  */
 
-namespace modernkernel\dotdotdot;
+namespace matithyah\dotdotdot;
 
 
 use yii\web\AssetBundle;
