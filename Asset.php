@@ -18,7 +18,7 @@ class Asset extends AssetBundle
 {
     public $sourcePath = '@npm/jquery.dotdotdot/src';
     public $js = [
-        'jquery.dotdotdot.min.js'
+        'jquery.dotdotdot.js'
     ];
     public $depends = [
         'yii\web\JqueryAsset',
